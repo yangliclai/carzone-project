@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+print('base-dir02', BASE_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -118,4 +118,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
+# Static settings
+# static_relate parameter 001
 STATIC_URL = '/static/'
+# static_relate parameter 002
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'carzone/static'),
+]
+# static_relate parameter 003
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
